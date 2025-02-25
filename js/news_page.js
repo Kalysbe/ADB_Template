@@ -9,12 +9,12 @@ function createBlogPost(post) {
         <div class="col-lg-12">
             <div class="post-${post.id} post type-post status-publish format-standard has-post-thumbnail hentry">
                 <div class="blog-img">
-                    <a href="${post.link}" class="post-thumbnail">
+                    <a href="new-detail.html?id=${post._id}" class="post-thumbnail">
                         <img 
                             fetchpriority="high" 
                             width="870" 
                             height="540" 
-                            src="https://avatars.mds.yandex.net/i?id=7da87be6fb844f190bb75bb17ab065bdc0b2fc96-5876729-images-thumbs&n=13" 
+                            src="https://static.seekingalpha.com/cdn/s3/uploads/getty_images/878022900/image_878022900.jpg?io=getty-c-crop-16-9" 
                             class="attachment-post-thumbnail size-post-thumbnail wp-post-image" 
                             alt="${post.title}" 
                             decoding="async"
@@ -24,7 +24,7 @@ function createBlogPost(post) {
                 <div class="blog-content">
                     <div class="blog-meta">
                         <span>
-                            <a href="${post.link}"><i class="fal fa-comments"></i>${post.comments || 0} Comments</a>
+                            <a href="${post._id}"><i class="fal fa-comments"></i>${post.comments || 0} Comments</a>
                         </span>
                         <span>
                             <a href="#"><i class="fal fa-calendar-minus"></i>
@@ -33,7 +33,7 @@ function createBlogPost(post) {
                         </span>
                     </div>
                     <h2 class="blog-title h3">
-                        <a href="${post.link}">${post.title}</a>
+                        <a href="new-detail.html?id=${post._id}">${post.title}</a>
                     </h2>
                     <p class="blog-text">${post.excerpt}</p>
                     <a href="${post.link}" class="link-btn">Read More <i class="fal fa-long-arrow-right"></i></a>
